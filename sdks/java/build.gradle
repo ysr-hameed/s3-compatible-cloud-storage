@@ -1,0 +1,53 @@
+plugins {
+    id 'java-library'
+    id 'maven-publish'
+}
+
+group = 'com.hypz'
+version = '1.0.1'
+
+sourceCompatibility = JavaVersion.VERSION_1_8
+targetCompatibility = JavaVersion.VERSION_1_8
+
+sourceSets {
+    main {
+        java {
+            exclude '**/examples/**'
+        }
+    }
+}
+
+repositories {
+    mavenCentral()
+    google()
+}
+
+dependencies {
+    // Gson for JSON parsing
+    implementation 'com.google.code.gson:gson:2.10.1'
+    
+    // Android annotations (optional, for Android projects)
+    compileOnly 'androidx.annotation:annotation:1.7.1'
+    
+    // Testing
+    testImplementation 'junit:junit:4.13.2'
+}
+
+publishing {
+    publications {
+        maven(MavenPublication) {
+            from components.java
+            
+            groupId 'com.hypz'
+            artifactId 'hypz-sdk'
+            version '1.0.1'
+        }
+    }
+    
+    repositories {
+        maven {
+            name = "Local"
+            url = uri("${buildDir}/repo")
+        }
+    }
+}

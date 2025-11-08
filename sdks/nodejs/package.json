@@ -1,0 +1,47 @@
+{
+  "name": "@hypz/sdk",
+  "version": "1.0.1",
+  "description": "Official Hypz File Storage SDK for Node.js - S3-compatible cloud storage API",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "scripts": {
+    "test": "node test-sdk.js"
+  },
+  "keywords": [
+    "hypz",
+    "storage",
+    "file",
+    "upload",
+    "cdn",
+    "bucket",
+    "cloud",
+    "s3",
+    "file-storage",
+    "api",
+    "sdk"
+  ],
+  "author": "Hypz <support@hypz.io>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ysr-hameed/hypz.git",
+    "directory": "hypz-sdk/nodejs"
+  },
+  "homepage": "https://hypz.io",
+  "bugs": {
+    "url": "https://github.com/ysr-hameed/hypz/issues",
+    "email": "support@hypz.io"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "files": [
+    "index.js",
+    "index.d.ts",
+    "README.md",
+    "LICENSE"
+  ],
+  "dependencies": {
+    "axios": "^1.6.0"
+  }
+}
